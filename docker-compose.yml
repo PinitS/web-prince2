@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  web-prince:
+    build: .
+    container_name: web-prince
+    expose:
+      - "80"
+    networks:
+      - docker-network
+
+networks:
+  docker-network:
+    external: true
